@@ -44,3 +44,46 @@
 //@include foundation-top-bar;
 //@include foundation-visibility-classes;
 //@include foundation-float-classes;
+
+$sidebar-width:16rem;
+
+body{overflow: hidden;} // required for grid frame according to docs
+//.medium-cell-block-y{height:auto;} // fix for apparent bug in sass version of foundation css
+
+
+.cvSidebar{
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  width:$sidebar-width;
+  height:100vh;
+  overflow-y:auto;
+  background-color:$white;
+
+  &_siteLogo{
+    color:$body-background;
+    font-weight:700;
+    font-size:1.75rem;
+    text-align:center;
+  }
+}
+
+.cvContent{
+  margin-left:$sidebar-width;
+  padding:1rem 0;
+
+  &_panel{
+    background-color:#323c48;
+    padding:1rem;
+
+    &--recentVotes{
+
+    }
+    &--upcomingVotes{
+
+    }
+  }
+}
+
+//@include breakpoint(small only) {}
