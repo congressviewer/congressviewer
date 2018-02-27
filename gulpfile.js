@@ -64,6 +64,6 @@ gulp.task('scripts', function() {
 
 // Watch task
 gulp.task('watch', function() {
-  gulp.watch('./src/scss/app.scss',['styles'])
+  gulp.watch('./src/scss/*',['styles'])
   gulp.watch('./src/js/app.js',['scripts'])
 });

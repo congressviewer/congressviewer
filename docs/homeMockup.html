@@ -7,6 +7,7 @@
   <title>Congress Viewer</title>
   <link rel="stylesheet" href="css/app.css">
   <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.css">-->
+  <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
 
   <link rel="icon" type="image/png" href="img/favicon.png">
 
@@ -23,8 +24,8 @@
 <body>
 
 <div class="cvSidebar">
-  <h1 class="cvSidebar_siteLogo">Congress Viewer</h1>
-  <ul class="menu">
+  <h1 class="cvSidebar_siteLogo">Congress<br><i class="fas fa-eye"></i>Viewer</h1>
+  <ul class="menu" style="line-height: 2rem;">
     <li><a href="#">Recent Votes</a></li>
     <li><a href="#">Upcoming Votes</a></li>
     <li><a href="#">Representitive Info</a></li>
@@ -33,16 +34,111 @@
 <div class="cvContent">
   <div class="grid-x grid-padding-x">
     <div class="cell small-6">
+
+      <h2>Recent Votes</h2>
+
       <div class="cvContent_panel">
-        <h2>Recent Votes</h2>
-        <p>lipsum</p>
+        <!--date--><h6 class="light-text float-right">2017-07-28</h6>
+        <!--question--><h6 class="light-text">On Passage</h6>
+        <!--description--><h4>Department of Veterans Affairs Bonus Transparency Act</h4>
+        <!--number-title--><p>S.114 - To authorize appropriations and to appropriate amounts for the Veterans Choice Program of the Department of Veterans Affairs, to improve hiring authorities of the Department, to authorize major medical facility leases, and for other purposes.</p>
+        <!--latest action--><p><strong>Became Public Law No: 115-46</strong></p>
+        <hr>
+
+        <div class="grid-x grid-padding-x">
+          <div class="cell small-3">
+            <h4><small>Result:</small> <span class="passed">Passed</span></h4>
+          </div>
+          <div class="cell small-3">
+            <h4><small>Yes</small></h4>
+            <span class="label democrat">186</span>
+            <span class="label republican">228</span>
+          </div>
+          <div class="cell small-3">
+            <h4><small>No</small></h4>
+            <span class="label democrat">0</span>
+            <span class="label republican">0</span>
+          </div>
+          <div class="cell small-3">
+            <h4><small>Not Voting</small></h4>
+            <span class="label democrat">8</span>
+            <span class="label republican">12</span>
+          </div>
+        </div>
       </div>
+
+      <div class="cvContent_panel">
+        <!--date--><h6 class="light-text float-right">2017-07-27</h6>
+        <!--question--><h6 class="light-text">On Agreeing to the Amendment</h6>
+        <!--description--><h4>Nadler of New York Part B Amendment No. 38</h4>
+        <!--number-title--><p>H.R.3219 - Make America Secure Appropriations Act, 2018</p>
+        <!--latest action--><p><strong>Read the second time. Placed on Senate Legislative Calendar under General Orders. Calendar No. 187.</strong></p>
+        <hr>
+
+        <div class="grid-x grid-padding-x">
+          <div class="cell small-3">
+            <h4><small>Result:</small> <span class="failed">Failed</span></h4>
+          </div>
+          <div class="cell small-3">
+            <h4><small>Yes</small></h4>
+            <span class="label democrat">169</span>
+            <span class="label republican">3</span>
+          </div>
+          <div class="cell small-3">
+            <h4><small>No</small></h4>
+            <span class="label democrat">22</span>
+            <span class="label republican">230</span>
+          </div>
+          <div class="cell small-3">
+            <h4><small>Not Voting</small></h4>
+            <span class="label democrat">3</span>
+            <span class="label republican">7</span>
+          </div>
+        </div>
+      </div>
+
+
     </div>
     <div class="cell small-6">
+
+      <h2>Upcoming Votes</h2>
+
       <div class="cvContent_panel">
-        <h2>Upcoming Votes</h2>
-        <p>lipsum</p>
+        <strong>congress:</strong> 115<br>
+        <strong>chamber:</strong> house<br>
+        <strong>bill_id:</strong> hr5078-115<br>
+        <strong>bill_slug:</strong> hr5078<br>
+        <strong>bill_type:</strong> hr<br>
+        <strong>bill_number:</strong> H.R.5078<br>
+        <strong>api_uri:</strong> https://api.propublica.org/congress/v1/115/bills/hr5078.json<br>
+        <strong>legislative_day:</strong> 2018-02-26<br>
+        <strong>scheduled_at:</strong> 2018-02-24T08:45:49-05:00<br>
+        <strong>range:</strong> week<br>
+        <strong>context:</strong> null<br>
+        <strong>description:</strong> TRID Improvement Act of 2018, as amended<br>
+        <strong>bill_url:</strong> http://docs.house.gov/billsthisweek/20180226/HR5078.pdf<br>
+        <strong>consideration:</strong> suspension<br>
+        <strong>source_type:</strong> house_docs<br>
+        <strong>url:</strong> http://docs.house.gov/floor/Default.aspx?date=2018-02-26
       </div>
+
+      <div class="cvContent_panel">
+        <strong>congress:</strong> 115<br>
+        <strong>chamber:</strong> house<br>
+        <strong>bill_id:</strong> hr880-115<br>
+        <strong>bill_slug:</strong> hr880<br>
+        <strong>bill_type:</strong> hr<br>
+        <strong>bill_number:</strong> H.R.880<br>
+        <strong>api_uri:</strong> https://api.propublica.org/congress/v1/115/bills/hr880.json<br>
+        <strong>legislative_day:</strong> 2018-02-26<br>
+        <strong>scheduled_at:</strong> 2018-02-23T00:45:48-05:00<br>
+        <strong>range:</strong> week<br>
+        <strong>context:</strong> null<br>
+        <strong>description:</strong> MISSION ZERO Act, as amended<br>
+        <strong>bill_url:</strong> http://docs.house.gov/billsthisweek/20180226/HR880.pdf<br>
+        <strong>consideration:</strong> suspension<br>
+        <strong>source_type:</strong> house_docs<br>
+        <strong>url:</strong> http://docs.house.gov/floor/Default.aspx?date=2018-02-26
     </div>
   </div>
 </div>

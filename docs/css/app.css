@@ -591,7 +591,7 @@ body {
   margin: 0;
   padding: 0;
   background: #2a323c;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: normal;
   line-height: 1.5;
   color: #fefefe;
@@ -2132,7 +2132,7 @@ h6, .h6 {
   h5 small, .h5 small,
   h6 small, .h6 small {
     line-height: 0;
-    color: #cacaca; }
+    color: #9fa2a7; }
 
 h1, .h1 {
   font-size: 1.5rem;
@@ -2201,7 +2201,7 @@ hr {
   margin: 1.25rem auto;
   border-top: 0;
   border-right: 0;
-  border-bottom: 1px solid #cacaca;
+  border-bottom: 1px solid #9fa2a7;
   border-left: 0; }
 
 ul,
@@ -2234,15 +2234,15 @@ dl {
 blockquote {
   margin: 0 0 1rem;
   padding: 0.5625rem 1.25rem 0 1.1875rem;
-  border-left: 1px solid #cacaca; }
+  border-left: 1px solid #9fa2a7; }
   blockquote, blockquote p {
     line-height: 1.6;
-    color: #8a8a8a; }
+    color: #777; }
 
 cite {
   display: block;
   font-size: 0.8125rem;
-  color: #8a8a8a; }
+  color: #777; }
   cite:before {
     content: "— "; }
 
@@ -2256,7 +2256,7 @@ figure {
 
 code {
   padding: 0.125rem 0.3125rem 0.0625rem;
-  border: 1px solid #cacaca;
+  border: 1px solid #9fa2a7;
   background-color: #e6e6e6;
   font-family: Consolas, "Liberation Mono", Courier, monospace;
   font-weight: normal;
@@ -2274,7 +2274,7 @@ kbd {
   margin-bottom: 0.5rem;
   font-weight: normal;
   line-height: 1.4;
-  color: #8a8a8a; }
+  color: #777; }
 
 .lead {
   font-size: 125%;
@@ -2360,7 +2360,7 @@ ul.no-bullet, ol.no-bullet {
     content: " (" attr(title) ")"; }
   pre,
   blockquote {
-    border: 1px solid #8a8a8a;
+    border: 1px solid #777;
     page-break-inside: avoid; }
   thead {
     display: table-header-group; }
@@ -2382,8 +2382,83 @@ ul.no-bullet, ol.no-bullet {
   .print-break-inside {
     page-break-inside: auto; } }
 
+.label {
+  display: inline-block;
+  padding: 0.33333rem 0.5rem;
+  border-radius: 0;
+  font-size: 0.8rem;
+  line-height: 1;
+  white-space: nowrap;
+  cursor: default;
+  background: #04a2b3;
+  color: #fefefe; }
+  .label.primary {
+    background: #04a2b3;
+    color: #0a0a0a; }
+  .label.secondary {
+    background: #dcdcdc;
+    color: #0a0a0a; }
+  .label.success {
+    background: #66d203;
+    color: #0a0a0a; }
+  .label.warning {
+    background: #ffae00;
+    color: #0a0a0a; }
+  .label.alert {
+    background: #e66060;
+    color: #0a0a0a; }
+  .label.democrat {
+    background: #04a2b3;
+    color: #0a0a0a; }
+  .label.republican {
+    background: #e66060;
+    color: #0a0a0a; }
+
+.float-left {
+  float: left !important; }
+
+.float-right {
+  float: right !important; }
+
+.float-center {
+  display: block;
+  margin-right: auto;
+  margin-left: auto; }
+
+.clearfix::before, .clearfix::after {
+  display: table;
+  content: ' ';
+  flex-basis: 0;
+  order: 1; }
+
+.clearfix::after {
+  clear: both; }
+
 body {
   overflow: hidden; }
+
+.light-text {
+  color: #9fa2a7; }
+
+.democrat {
+  color: #04a2b3; }
+
+.republican {
+  color: #e66060; }
+
+.passed {
+  color: #66d203; }
+
+.failed {
+  color: #e66060; }
+
+.label.democrat {
+  background-color: #04a2b3;
+  color: #fefefe; }
+
+.label.republican {
+  background-color: #e66060;
+  color: #fefefe; }
 
 .cvSidebar {
   position: absolute;
@@ -2397,12 +2472,19 @@ body {
   .cvSidebar_siteLogo {
     color: #2a323c;
     font-weight: 700;
-    font-size: 1.75rem;
-    text-align: center; }
+    font-size: 2.75rem;
+    line-height: 1.2;
+    text-align: center;
+    margin: .5rem 0; }
+    .cvSidebar_siteLogo i {
+      font-size: 2.5rem;
+      margin-right: .325rem; }
 
 .cvContent {
   margin-left: 16rem;
   padding: 1rem 0; }
   .cvContent_panel {
     background-color: #323c48;
-    padding: 1rem; }
+    padding: .75rem 1.25rem;
+    margin-bottom: 1rem;
+    border-radius: .25rem; }

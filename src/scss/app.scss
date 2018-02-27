@@ -26,7 +26,7 @@
 //@include foundation-dropdown;
 //@include foundation-dropdown-menu;
 //@include foundation-responsive-embed;
-//@include foundation-label;
+@include foundation-label;
 //@include foundation-media-object;
 //@include foundation-off-canvas;
 //@include foundation-orbit;
@@ -43,13 +43,30 @@
 //@include foundation-tooltip;
 //@include foundation-top-bar;
 //@include foundation-visibility-classes;
-//@include foundation-float-classes;
+@include foundation-float-classes;
 
 $sidebar-width:16rem;
 
 body{overflow: hidden;} // required for grid frame according to docs
 //.medium-cell-block-y{height:auto;} // fix for apparent bug in sass version of foundation css
 
+.light-text{color:#9fa2a7;}
+.democrat{color:get-color(democrat)}
+.republican{color:get-color(republican)}
+.passed{color:get-color(success)}
+.failed{color:get-color(alert)}
+
+
+
+.label.democrat{
+  background-color:get-color(democrat);
+  color:$white;
+}
+
+.label.republican{
+  background-color:get-color(republican);
+  color:$white;
+}
 
 .cvSidebar{
   position:absolute;
@@ -64,8 +81,15 @@ body{overflow: hidden;} // required for grid frame according to docs
   &_siteLogo{
     color:$body-background;
     font-weight:700;
-    font-size:1.75rem;
+    font-size:2.75rem;
+    line-height:1.2;
     text-align:center;
+    margin:.5rem 0;
+
+    i{
+      font-size:2.5rem;
+      margin-right: .325rem;
+    }
   }
 }
 
@@ -75,7 +99,9 @@ body{overflow: hidden;} // required for grid frame according to docs
 
   &_panel{
     background-color:#323c48;
-    padding:1rem;
+    padding:.75rem 1.25rem;
+    margin-bottom:1rem;
+    border-radius:.25rem;
 
     &--recentVotes{
 
