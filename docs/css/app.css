@@ -2475,10 +2475,43 @@ body {
     font-size: 2.75rem;
     line-height: 1.2;
     text-align: center;
-    margin: .5rem 0; }
+    margin: 1.5rem 0 1.25rem; }
     .cvSidebar_siteLogo i {
       font-size: 2.5rem;
       margin-right: .325rem; }
+  .cvSidebar_nav {
+    margin: 1.25rem 0;
+    padding: 0; }
+  .cvSidebar_navItem {
+    display: block;
+    padding: .875rem 1rem .875rem 1.375rem;
+    background-color: #fefefe;
+    color: #777;
+    font-size: 1.125rem;
+    transition: all 0.3s ease; }
+    .cvSidebar_navItem:hover, .cvSidebar_navItem:focus {
+      background-color: #f3f3f3;
+      color: #0a0a0a; }
+    .cvSidebar_navItem i {
+      margin-right: .75rem; }
+  .cvSidebar_divider {
+    margin: 1rem 1.375rem;
+    border-color: #aaaaaa; }
+  .cvSidebar_siteLinks {
+    margin: 1.5rem 0;
+    padding: 0;
+    text-align: center; }
+    .cvSidebar_siteLinks li {
+      display: inline-block;
+      padding: 0 .125rem; }
+  .cvSidebar_siteLinksItem {
+    color: #777;
+    display: block;
+    padding: .125rem .25rem;
+    font-size: .875rem;
+    transition: all 0.3s ease; }
+    .cvSidebar_siteLinksItem:hover, .cvSidebar_siteLinksItem:focus {
+      color: #0a0a0a; }
 
 .cvContent {
   margin-left: 16rem;

@@ -84,13 +84,65 @@ body{overflow: hidden;} // required for grid frame according to docs
     font-size:2.75rem;
     line-height:1.2;
     text-align:center;
-    margin:.5rem 0;
+    margin:1.5rem 0 1.25rem;
 
     i{
       font-size:2.5rem;
       margin-right: .325rem;
     }
   }
+
+  &_nav{
+    margin:1.25rem 0;
+    padding:0;
+  }
+
+  &_navItem{
+    display:block;
+    padding:.875rem 1rem .875rem 1.375rem;
+    background-color:$white;
+    color:$dark-gray;
+    font-size:1.125rem;
+    transition: all 0.3s ease;
+
+    &:hover,&:focus{
+      background-color:#f3f3f3;
+      color:$black;
+    }
+
+    i{margin-right:.75rem;}
+
+  }
+
+  &_divider{
+    margin: 1rem 1.375rem;
+    border-color:lighten($dark-gray, 20%);
+  }
+
+  &_siteLinks{
+    margin:1.5rem 0;
+    padding:0;
+    text-align:center;
+
+    li{
+      display:inline-block;
+      padding:0 .125rem;
+    }
+  }
+
+  &_siteLinksItem{
+    color:$dark-gray;
+    display:block;
+    padding:.125rem .25rem;
+    font-size:.875rem;
+    transition: all 0.3s ease;
+
+      &:hover,&:focus{
+        color:$black;
+      }
+  }
+
+
 }
 
 .cvContent{
