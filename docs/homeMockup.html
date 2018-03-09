@@ -24,21 +24,22 @@
 <body>
 
 <div class="cvSidebar">
-  <h1 class="cvSidebar_siteLogo">Congress<br><i class="fas fa-eye"></i>Viewer</h1>
-  <ul class="cvSidebar_nav">
+  <h1 class="cvSidebar_siteLogo">Congress<br class="hide-for-small-only"> <i class="fas fa-eye"></i>Viewer</h1>
+  <hr class="cvSidebar_divider hide-for-small-only">
+  <ul class="cvSidebar_nav hide-for-small-only">
     <li><a href="#" class="cvSidebar_navItem"><i class="fas fa-check"></i>Recent Votes</a></li>
     <li><a href="#" class="cvSidebar_navItem"><i class="far fa-calendar-alt"></i>Upcoming Bills</a></li>
     <li><a href="#" class="cvSidebar_navItem"><i class="fas fa-user-circle"></i>Representitive Info</a></li>
   </ul>
-  <hr class="cvSidebar_divider">
-  <ul class="cvSidebar_siteLinks">
+  <hr class="cvSidebar_divider hide-for-small-only">
+  <ul class="cvSidebar_siteLinks hide-for-small-only">
     <li><a href="#" class="cvSidebar_siteLinksItem">About</a></li>
     <li><a href="#" class="cvSidebar_siteLinksItem">Contact</a></li>
   </ul>
 </div>
 <div class="cvContent">
-  <div class="grid-x grid-padding-x">
-    <div class="cell small-8">
+  <div class="cvMainGrid grid-x grid-padding-x">
+    <div class="cell large-8">
 
       <h2>Recent Votes</h2>
 
@@ -102,9 +103,8 @@
         </div>
       </div>
 
-
     </div>
-    <div class="cell small-4">
+    <div class="cell large-4">
 
       <h2>Upcoming Bills</h2>
 
@@ -114,8 +114,8 @@
         <h4>TRID Improvement Act of 2018, as amended</h4>
 
         <div class="button-group secondary expanded small">
-          <a class="button">Bill Overview</a>
-          <a class="button">News Articles</a>
+          <button class="button" data-open="exampleModal1">Bill Overview</button>
+          <button class="button" data-open="exampleModal2">News Articles</button>
         </div>
         <!--
         <strong>congress:</strong> 115<br>
@@ -137,112 +137,204 @@
       </div>
 
       <div class="cvContent_panel">
-        <!--date--><h6 class="light-text float-right">H.R.5078</h6>
+        <!--date--><h6 class="light-text float-right">H.R.880</h6>
         <!--question--><h6 class="light-text">House</h6>
-        <h4>TRID Improvement Act of 2018, as amended</h4>
-
+        <h4>MISSION ZERO Act, as amended</h4>
         <div class="button-group secondary expanded small">
-          <a class="button">Bill Overview</a>
-          <a class="button">News Articles</a>
+          <button class="button" data-open="exampleModal1">Bill Overview</button>
+          <button class="button" data-open="exampleModal2">News Articles</button>
         </div>
-        <!--
-        <strong>congress:</strong> 115<br>
-        <strong>chamber:</strong> house<br>
-        <strong>bill_id:</strong> hr5078-115<br>
-        <strong>bill_slug:</strong> hr5078<br>
-        <strong>bill_number:</strong> H.R.5078<br>
-        <strong>api_uri:</strong> https://api.propublica.org/congress/v1/115/bills/hr5078.json<br>
-        <strong>legislative_day:</strong> 2018-02-26<br>
-        <strong>scheduled_at:</strong> 2018-02-24T08:45:49-05:00<br>
-        <strong>range:</strong> week<br>
-        <strong>context:</strong> null<br>
-        <strong>description:</strong> TRID Improvement Act of 2018, as amended<br>
-        <strong>bill_url:</strong> http://docs.house.gov/billsthisweek/20180226/HR5078.pdf<br>
-        <strong>consideration:</strong> suspension<br>
-        <strong>source_type:</strong> house_docs<br>
-        <strong>url:</strong> http://docs.house.gov/floor/Default.aspx?date=2018-02-26
-        -->
       </div>
 
-      <div class="cvContent_panel">
-        <!--date--><h6 class="light-text float-right">H.R.5078</h6>
-        <!--question--><h6 class="light-text">House</h6>
-        <h4>TRID Improvement Act of 2018, as amended</h4>
-
-        <div class="button-group secondary expanded small">
-          <a class="button">Bill Overview</a>
-          <a class="button">News Articles</a>
-        </div>
-        <!--
-        <strong>congress:</strong> 115<br>
-        <strong>chamber:</strong> house<br>
-        <strong>bill_id:</strong> hr5078-115<br>
-        <strong>bill_slug:</strong> hr5078<br>
-        <strong>bill_number:</strong> H.R.5078<br>
-        <strong>api_uri:</strong> https://api.propublica.org/congress/v1/115/bills/hr5078.json<br>
-        <strong>legislative_day:</strong> 2018-02-26<br>
-        <strong>scheduled_at:</strong> 2018-02-24T08:45:49-05:00<br>
-        <strong>range:</strong> week<br>
-        <strong>context:</strong> null<br>
-        <strong>description:</strong> TRID Improvement Act of 2018, as amended<br>
-        <strong>bill_url:</strong> http://docs.house.gov/billsthisweek/20180226/HR5078.pdf<br>
-        <strong>consideration:</strong> suspension<br>
-        <strong>source_type:</strong> house_docs<br>
-        <strong>url:</strong> http://docs.house.gov/floor/Default.aspx?date=2018-02-26
-        -->
-      </div>
-
-      <div class="cvContent_panel">
-        <!--date--><h6 class="light-text float-right">H.R.5078</h6>
-        <!--question--><h6 class="light-text">House</h6>
-        <h4>TRID Improvement Act of 2018, as amended</h4>
-
-        <div class="button-group secondary expanded small">
-          <a class="button">Bill Overview</a>
-          <a class="button">News Articles</a>
-        </div>
-        <!--
-        <strong>congress:</strong> 115<br>
-        <strong>chamber:</strong> house<br>
-        <strong>bill_id:</strong> hr5078-115<br>
-        <strong>bill_slug:</strong> hr5078<br>
-        <strong>bill_number:</strong> H.R.5078<br>
-        <strong>api_uri:</strong> https://api.propublica.org/congress/v1/115/bills/hr5078.json<br>
-        <strong>legislative_day:</strong> 2018-02-26<br>
-        <strong>scheduled_at:</strong> 2018-02-24T08:45:49-05:00<br>
-        <strong>range:</strong> week<br>
-        <strong>context:</strong> null<br>
-        <strong>description:</strong> TRID Improvement Act of 2018, as amended<br>
-        <strong>bill_url:</strong> http://docs.house.gov/billsthisweek/20180226/HR5078.pdf<br>
-        <strong>consideration:</strong> suspension<br>
-        <strong>source_type:</strong> house_docs<br>
-        <strong>url:</strong> http://docs.house.gov/floor/Default.aspx?date=2018-02-26
-        -->
-      </div>
-<!--
-      <div class="cvContent_panel">
-        <strong>congress:</strong> 115<br>
-        <strong>chamber:</strong> house<br>
-        <strong>bill_id:</strong> hr880-115<br>
-        <strong>bill_slug:</strong> hr880<br>
-        <strong>bill_type:</strong> hr<br>
-        <strong>bill_number:</strong> H.R.880<br>
-        <strong>api_uri:</strong> https://api.propublica.org/congress/v1/115/bills/hr880.json<br>
-        <strong>legislative_day:</strong> 2018-02-26<br>
-        <strong>scheduled_at:</strong> 2018-02-23T00:45:48-05:00<br>
-        <strong>range:</strong> week<br>
-        <strong>context:</strong> null<br>
-        <strong>description:</strong> MISSION ZERO Act, as amended<br>
-        <strong>bill_url:</strong> http://docs.house.gov/billsthisweek/20180226/HR880.pdf<br>
-        <strong>consideration:</strong> suspension<br>
-        <strong>source_type:</strong> house_docs<br>
-        <strong>url:</strong> http://docs.house.gov/floor/Default.aspx?date=2018-02-26
     </div>
   </div>
--->
-
 </div>
 
+<div class="reveal large" id="exampleModal1" data-reveal>
+  <h1>Get a Specific Bill <small>Pro Publica API</small></h1>
 
+  <p>Use this request type to get details about a particular bill, including actions taken and votes. The attributes house_passage_vote and senate_passage_vote are populated (with the date of passage) only upon successful passage of the bill. Bills before the 113th Congress (prior to 2013) have fewer attribute values than those from the 113th Congress onward, because the more recent bill data comes from the bulk data provided by the Government Publishing Office. Details for the older bills came from scraping Thomas.gov, the former congressional site of the Library of Congress.</p>
+
+  <p class="lead">HTTP Request</p>
+  <p>GET https://api.propublica.org/congress/v1/{congress}/bills/{bill-id}.json</p>
+
+  <p class="lead">The above command returns JSON structured like this:</p>
+
+  <pre>
+    {
+    	"status": "OK",
+    	"copyright": "Copyright (c) 2018 Pro Publica Inc. All Rights Reserved.",
+    	"results": [
+    		{
+    			"bill_id": "hr5078-115",
+    			"bill_slug": "hr5078",
+    			"congress": "115",
+    			"bill": "H.R.5078",
+    			"bill_type": "hr",
+    			"number": "H.R.5078",
+    			"bill_uri": "https://api.propublica.org/congress/v1/115/bills/hr5078.json",
+    			"title": "To amend the Real Estate Settlement Procedures Act of 1974 to modify requirements related to mortgage disclosures, and for other purposes.",
+    			"short_title": "TRID Improvement Act of 2018",
+    			"sponsor_title": "Rep.",
+    			"sponsor": "French Hill",
+    			"sponsor_id": "H001072",
+    			"sponsor_uri": "https://api.propublica.org/congress/v1/members/H001072.json",
+    			"sponsor_party": "R",
+    			"sponsor_state": "AR",
+    			"gpo_pdf_uri": null,
+    			"congressdotgov_url": "https://www.congress.gov/bill/115th-congress/house-bill/5078",
+    			"govtrack_url": "https://www.govtrack.us/congress/bills/115/hr5078",
+    			"introduced_date": "2018-02-23",
+    			"active": true,
+    			"last_vote": null,
+    			"house_passage": "2018-02-27",
+    			"senate_passage": null,
+    			"enacted": null,
+    			"vetoed": null,
+    			"cosponsors": 0,
+    			"cosponsors_by_party": {},
+    			"withdrawn_cosponsors": 0,
+    			"primary_subject": "Finance and Financial Sector",
+    			"committees": "Senate Banking, Housing, and Urban Affairs Committee",
+    			"committee_codes": [
+    				"SSBK",
+    				"HSBA"
+    			],
+    			"subcommittee_codes": [],
+    			"latest_major_action_date": "2018-02-28",
+    			"latest_major_action": "Received in the Senate and Read twice and referred to the Committee on Banking, Housing, and Urban Affairs.",
+    			"house_passage_vote": "2018-02-27",
+    			"senate_passage_vote": null,
+    			"summary": "TRID Improvement Act of 2018 This bill amends the Real Estate Settlement Procedures of 1974 to modify disclosure requirements applicable to mortgage loan transactions. Specifically, the disclosed charges for any title insurance premium shall be equal to the amount charged for each individual title insurance policy, subject to any discounts as required by either state regulation or the title company rate filings. ",
+    			"summary_short": "TRID Improvement Act of 2018 This bill amends the Real Estate Settlement Procedures of 1974 to modify disclosure requirements applicable to mortgage loan transactions. Specifically, the disclosed charges for any title insurance premium shall be equal to the amount charged for each individual title insurance policy, subject to any discounts as required by either state regulation or the title company rate filings. ",
+    			"versions": [],
+    			"actions": [
+    				{
+    					"id": 9,
+    					"chamber": "Senate",
+    					"action_type": "IntroReferral",
+    					"datetime": "2018-02-28",
+    					"description": "Received in the Senate and Read twice and referred to the Committee on Banking, Housing, and Urban Affairs."
+    				},
+    				{
+    					"id": 8,
+    					"chamber": "House",
+    					"action_type": "Floor",
+    					"datetime": "2018-02-27",
+    					"description": "On motion to suspend the rules and pass the bill, as amended Agreed to by voice vote. (text: CR H1306)"
+    				},
+    				{
+    					"id": 7,
+    					"chamber": "House",
+    					"action_type": "Floor",
+    					"datetime": "2018-02-27",
+    					"description": "Considered under suspension of the rules. (consideration: CR H1306-1308)"
+    				},
+    				{
+    					"id": 6,
+    					"chamber": "House",
+    					"action_type": "Floor",
+    					"datetime": "2018-02-27",
+    					"description": "Motion to reconsider laid on the table Agreed to without objection."
+    				},
+    				{
+    					"id": 5,
+    					"chamber": "House",
+    					"action_type": "Floor",
+    					"datetime": "2018-02-27",
+    					"description": "On motion to suspend the rules and pass the bill, as amended Agreed to by voice vote."
+    				},
+    				{
+    					"id": 4,
+    					"chamber": "House",
+    					"action_type": "Floor",
+    					"datetime": "2018-02-27",
+    					"description": "DEBATE - The House proceeded with forty minutes of debate on H.R. 5078."
+    				},
+    				{
+    					"id": 3,
+    					"chamber": "House",
+    					"action_type": "Floor",
+    					"datetime": "2018-02-27",
+    					"description": "Considered under suspension of the rules."
+    				},
+    				{
+    					"id": 2,
+    					"chamber": "House",
+    					"action_type": "Floor",
+    					"datetime": "2018-02-27",
+    					"description": "Mr. Hill moved to suspend the rules and pass the bill, as amended."
+    				},
+    				{
+    					"id": 1,
+    					"chamber": "House",
+    					"action_type": "IntroReferral",
+    					"datetime": "2018-02-23",
+    					"description": "Referred to the House Committee on Financial Services."
+    				}
+    			],
+    			"votes": []
+    		}
+    	]
+    }
+  </pre>
+
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<div class="reveal large" id="exampleModal2" data-reveal>
+  <h1>Recent articles about X <small>News API</small></h1>
+
+  <p class="lead">HTTP Request</p>
+  <p>GET https://newsapi.org/v2/everything?q=X&sortBy=publishedAt&apiKey=API_K</p>
+
+  <p class="lead">The above command returns JSON structured like this:</p>
+
+  <pre>
+    {
+"status": "ok",
+"totalResults": 20,
+-"articles": [
+-{
+-"source": {
+"id": "the-wall-street-journal",
+"name": "The Wall Street Journal"
+},
+"author": "Kate O’Keeffe",
+"title": "Wynn Resorts to Pay $2.6 Billion in Settlement to Ease Steve Wynn's Sale of Stake",
+"description": "Wynn Resorts will pay $2.6 billion to settle litigation with a company that at one time held a 20% stake in the casino giant, but was forced by Wynn in 2012 to give up its shares.",
+"url": "https://www.wsj.com/articles/wynn-resorts-to-pay-universal-entertainment-to-settle-litigation-1520551385",
+"urlToImage": "https://images.wsj.net/im-3490/social",
+"publishedAt": "2018-03-09T03:32:50Z"
+},
+-{
+-"source": {
+"id": "bloomberg",
+"name": "Bloomberg"
+},
+"author": "Toru Fujioka, Masahiro Hidaka",
+"title": "BOJ Keeps Stimulus Unchanged Ahead of New Term for Kuroda",
+"description": "The Bank of Japan stayed the course with its monetary stimulus on Friday at Governor Haruhiko Kuroda’s final policy meeting before his new term begins next month.",
+"url": "https://www.bloomberg.com/news/articles/2018-03-09/boj-keeps-stimulus-unchanged-ahead-of-new-term-for-kuroda",
+"urlToImage": "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iQUqlOnUjDsE/v0/1200x800.jpg",
+"publishedAt": "2018-03-09T02:57:30Z"
+}
+
+...
+
+  </pre>
+
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+<script>
+  $(document).foundation();
+</script>
 </body>
 </html>

@@ -19,7 +19,7 @@
 @include foundation-button-group;
 //@include foundation-callout;
 //@include foundation-card;
-//@include foundation-close-button;
+@include foundation-close-button;
 //@include foundation-menu;
 //@include foundation-menu-icon;
 //@include foundation-drilldown-menu;
@@ -34,7 +34,7 @@
 //@include foundation-progress-bar;
 //@include foundation-slider;
 //@include foundation-sticky;
-//@include foundation-reveal;
+@include foundation-reveal;
 //@include foundation-switch;
 //@include foundation-table;
 //@include foundation-tabs;
@@ -42,20 +42,22 @@
 //@include foundation-title-bar;
 //@include foundation-tooltip;
 //@include foundation-top-bar;
-//@include foundation-visibility-classes;
+@include foundation-visibility-classes;
 @include foundation-float-classes;
 
 $sidebar-width:16rem;
 
-body{overflow: hidden;} // required for grid frame according to docs
 //.medium-cell-block-y{height:auto;} // fix for apparent bug in sass version of foundation css
+
+
+.reveal{padding-top: 1.5rem;}
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6, .reveal p, .reveal pre{color:$black;} // modal text color
 
 .light-text{color:#9fa2a7;}
 .democrat{color:get-color(democrat)}
 .republican{color:get-color(republican)}
 .passed{color:get-color(success)}
 .failed{color:get-color(alert)}
-
 
 
 .label.democrat{
@@ -68,15 +70,25 @@ body{overflow: hidden;} // required for grid frame according to docs
   color:$white;
 }
 
+.cvMainGrid{
+  padding:0 1rem;
+  .cell{padding-bottom:1.5rem;}
+}
+
 .cvSidebar{
-  position:absolute;
-  top:0;
-  bottom:0;
-  left:0;
-  width:$sidebar-width;
-  height:100vh;
-  overflow-y:auto;
+
   background-color:$white;
+
+  // Medium and up styles
+  @media screen and #{breakpoint(medium)} {
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    width:$sidebar-width;
+    height:100vh;
+    overflow-y:auto;
+  }
 
   &_siteLogo{
     color:$body-background;
@@ -84,7 +96,14 @@ body{overflow: hidden;} // required for grid frame according to docs
     font-size:2.75rem;
     line-height:1.2;
     text-align:center;
-    margin:1.5rem 0 1.25rem;
+
+    padding:.75rem 0;
+
+    // Medium and up styles
+    @media screen and #{breakpoint(medium)} {
+      margin:1.5rem 0;
+      padding:0;
+    }
 
     i{
       font-size:2.5rem;
@@ -146,8 +165,11 @@ body{overflow: hidden;} // required for grid frame according to docs
 }
 
 .cvContent{
-  margin-left:$sidebar-width;
-  padding:1rem 0;
+
+  @media screen and #{breakpoint(medium)} {
+    margin-left:$sidebar-width;
+    padding:1rem 0;
+  }
 
   &_panel{
     background-color:#323c48;
