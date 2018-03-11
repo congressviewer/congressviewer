@@ -3210,19 +3210,22 @@ html.is-reveal-open {
 
 .cvTabs .tabs {
   border-bottom: .125rem;
-  background-color: #323c48; }
+  background-color: #e1e5ea;
+  box-shadow: inset 1rem 1rem 3rem -1rem #b4becb; }
 
 .cvTabs .tabs-title {
   float: right; }
 
 .cvTabs .tabs-title a {
-  background-color: #2a323c;
+  background-color: transparent;
   color: #e6e6e6;
   font-family: 'Merriweather', serif;
   font-size: 1rem;
   border-top-left-radius: 1em 5em;
   border-top-right-radius: 1em 5em;
-  transition: all 0.2s ease; }
+  transition: all 0.2s ease;
+  background-color: #b4becb;
+  text-shadow: 1px 1px #4a5869; }
   @media screen and (min-width: 64em) {
     .cvTabs .tabs-title a {
       padding-left: 2rem;
@@ -3232,17 +3235,17 @@ html.is-reveal-open {
       border-top-left-radius: 1em 5em;
       border-top-right-radius: 1em 5em; } }
   .cvTabs .tabs-title a:hover {
-    color: #b3b3b3; }
+    background-color: #a5b1c0;
+    color: #fefefe; }
   .cvTabs .tabs-title a:focus {
-    background-color: #e6e6e6;
     outline: none; }
 
 .cvTabs .is-active > a {
-  background-color: #fefefe;
-  color: #2a323c; }
+  background-color: #2a323c;
+  color: #fefefe; }
   .cvTabs .is-active > a:hover {
-    background-color: #fefefe;
-    color: #2a323c; }
+    background-color: #2a323c;
+    color: #fefefe; }
 
 .cvTabs .tabs-panel {
   border-top: 0.125rem solid #fefefe;

@@ -132,157 +132,24 @@
   </div>
 
 
-</div><!--.cvContent-->>
+</div><!--.cvContent-->
 
-<div class="reveal large" id="exampleModal1" data-reveal>
-  <h1>Get a Specific Bill <small>Pro Publica API</small></h1>
+<div class="reveal large" id="js-modalBillOverview" data-reveal>
+  <!-- Content will be loaded here from somwhere else, crazy! -->
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
 
+  <h4>ProRepublica API Call: <small>Get a Specific Bill</small></h4>
   <p>Use this request type to get details about a particular bill, including actions taken and votes. The attributes house_passage_vote and senate_passage_vote are populated (with the date of passage) only upon successful passage of the bill. Bills before the 113th Congress (prior to 2013) have fewer attribute values than those from the 113th Congress onward, because the more recent bill data comes from the bulk data provided by the Government Publishing Office. Details for the older bills came from scraping Thomas.gov, the former congressional site of the Library of Congress.</p>
 
-  <p class="lead">HTTP Request</p>
-  <p>GET https://api.propublica.org/congress/v1/{congress}/bills/{bill-id}.json</p>
-
-  <p class="lead">The above command returns JSON structured like this:</p>
-
-  <pre>
-    {
-    	"status": "OK",
-    	"copyright": "Copyright (c) 2018 Pro Publica Inc. All Rights Reserved.",
-    	"results": [
-    		{
-    			"bill_id": "hr5078-115",
-    			"bill_slug": "hr5078",
-    			"congress": "115",
-    			"bill": "H.R.5078",
-    			"bill_type": "hr",
-    			"number": "H.R.5078",
-    			"bill_uri": "https://api.propublica.org/congress/v1/115/bills/hr5078.json",
-    			"title": "To amend the Real Estate Settlement Procedures Act of 1974 to modify requirements related to mortgage disclosures, and for other purposes.",
-    			"short_title": "TRID Improvement Act of 2018",
-    			"sponsor_title": "Rep.",
-    			"sponsor": "French Hill",
-    			"sponsor_id": "H001072",
-    			"sponsor_uri": "https://api.propublica.org/congress/v1/members/H001072.json",
-    			"sponsor_party": "R",
-    			"sponsor_state": "AR",
-    			"gpo_pdf_uri": null,
-    			"congressdotgov_url": "https://www.congress.gov/bill/115th-congress/house-bill/5078",
-    			"govtrack_url": "https://www.govtrack.us/congress/bills/115/hr5078",
-    			"introduced_date": "2018-02-23",
-    			"active": true,
-    			"last_vote": null,
-    			"house_passage": "2018-02-27",
-    			"senate_passage": null,
-    			"enacted": null,
-    			"vetoed": null,
-    			"cosponsors": 0,
-    			"cosponsors_by_party": {},
-    			"withdrawn_cosponsors": 0,
-    			"primary_subject": "Finance and Financial Sector",
-    			"committees": "Senate Banking, Housing, and Urban Affairs Committee",
-    			"committee_codes": [
-    				"SSBK",
-    				"HSBA"
-    			],
-    			"subcommittee_codes": [],
-    			"latest_major_action_date": "2018-02-28",
-    			"latest_major_action": "Received in the Senate and Read twice and referred to the Committee on Banking, Housing, and Urban Affairs.",
-    			"house_passage_vote": "2018-02-27",
-    			"senate_passage_vote": null,
-    			"summary": "TRID Improvement Act of 2018 This bill amends the Real Estate Settlement Procedures of 1974 to modify disclosure requirements applicable to mortgage loan transactions. Specifically, the disclosed charges for any title insurance premium shall be equal to the amount charged for each individual title insurance policy, subject to any discounts as required by either state regulation or the title company rate filings. ",
-    			"summary_short": "TRID Improvement Act of 2018 This bill amends the Real Estate Settlement Procedures of 1974 to modify disclosure requirements applicable to mortgage loan transactions. Specifically, the disclosed charges for any title insurance premium shall be equal to the amount charged for each individual title insurance policy, subject to any discounts as required by either state regulation or the title company rate filings. ",
-    			"versions": [],
-    			"actions": [
-    				{
-    					"id": 9,
-    					"chamber": "Senate",
-    					"action_type": "IntroReferral",
-    					"datetime": "2018-02-28",
-    					"description": "Received in the Senate and Read twice and referred to the Committee on Banking, Housing, and Urban Affairs."
-    				},
-    				{
-    					"id": 8,
-    					"chamber": "House",
-    					"action_type": "Floor",
-    					"datetime": "2018-02-27",
-    					"description": "On motion to suspend the rules and pass the bill, as amended Agreed to by voice vote. (text: CR H1306)"
-    				},
-    				{
-    					"id": 7,
-    					"chamber": "House",
-    					"action_type": "Floor",
-    					"datetime": "2018-02-27",
-    					"description": "Considered under suspension of the rules. (consideration: CR H1306-1308)"
-    				},
-    				{
-    					"id": 6,
-    					"chamber": "House",
-    					"action_type": "Floor",
-    					"datetime": "2018-02-27",
-    					"description": "Motion to reconsider laid on the table Agreed to without objection."
-    				},
-    				{
-    					"id": 5,
-    					"chamber": "House",
-    					"action_type": "Floor",
-    					"datetime": "2018-02-27",
-    					"description": "On motion to suspend the rules and pass the bill, as amended Agreed to by voice vote."
-    				},
-    				{
-    					"id": 4,
-    					"chamber": "House",
-    					"action_type": "Floor",
-    					"datetime": "2018-02-27",
-    					"description": "DEBATE - The House proceeded with forty minutes of debate on H.R. 5078."
-    				},
-    				{
-    					"id": 3,
-    					"chamber": "House",
-    					"action_type": "Floor",
-    					"datetime": "2018-02-27",
-    					"description": "Considered under suspension of the rules."
-    				},
-    				{
-    					"id": 2,
-    					"chamber": "House",
-    					"action_type": "Floor",
-    					"datetime": "2018-02-27",
-    					"description": "Mr. Hill moved to suspend the rules and pass the bill, as amended."
-    				},
-    				{
-    					"id": 1,
-    					"chamber": "House",
-    					"action_type": "IntroReferral",
-    					"datetime": "2018-02-23",
-    					"description": "Referred to the House Committee on Financial Services."
-    				}
-    			],
-    			"votes": []
-    		}
-    	]
-    }
-  </pre>
-
-  <button class="close-button" data-close aria-label="Close modal" type="button">
-    <span aria-hidden="true">&times;</span>
-  </button>
-</div>
-
-<div class="reveal large" id="exampleModal2" data-reveal>
-  <h1>Recent articles about X <small>News API</small></h1>
-
-  <p class="lead">HTTP Request</p>
-  <p>GET https://newsapi.org/v2/everything?q=X&sortBy=publishedAt&apiKey=API_K</p>
-
-  <p class="lead">The above command returns JSON structured like this:</p>
-
-  <button class="close-button" data-close aria-label="Close modal" type="button">
-    <span aria-hidden="true">&times;</span>
-  </button>
 </div>
 
 <div class="reveal large" id="js-modalBillArticles" data-reveal>
   <!-- Content will be loaded here from somwhere else, crazy! -->
+  <button class="close-button" data-close aria-label="Close modal" type="button">
+    <span aria-hidden="true">&times;</span>
+  </button>
 </div>
 
 
@@ -318,7 +185,8 @@
           '<h4>' + dataUpcomingJSON[i].description + '</h4> \n' +
 
           '<div class="button-group secondary expanded small"> \n' +
-            '<button class="button">Bill Overview</button> \n' +
+            '<button class="button js-billOverview" data-bill-slug="'+ dataUpcomingJSON[i].bill_slug + '"' +
+                  ' data-bill-desc="' + dataUpcomingJSON[i].description + '">Bill Overview</button> \n' +
             '<button class="button js-billArticles" data-bill-slug="'+ dataUpcomingJSON[i].bill_slug + '"' +
                   ' data-bill-desc="' + dataUpcomingJSON[i].description + '"' +
                   ' data-bill-number="' + dataUpcomingJSON[i].bill_number + '">News Articles</button> \n' +
@@ -359,30 +227,75 @@
 
     var query = encodeURIComponent('"' + billSlug + '" OR "' + billNumber + '" ');
 
-    console.log("sources: " + sources);
-    console.log("query: " + query);
+    //console.log("sources: " + sources);
+    //console.log("query: " + query);
 
-    var url = "https://newsapi.org/v2/everything?q=" + query + "&from=2017-01-01&sortBy=relevancy&sources=" + sources;
+    var apiUrl = "https://newsapi.org/v2/everything?q=" + query + "&from=2017-01-01&sortBy=relevancy&sources=" + sources;
 
-    console.log(url);
+    console.log("news api: " + apiUrl);
 
     $.ajax({
-     url: url,
+     url: apiUrl,
      type: "GET",
      dataType: 'json',
      headers: {'X-Api-Key': '6ae0570e133347c9af205810da9ef7e1'}
     })
     .done(function(dataJSON){ // function call when response is received, dataJSON is response from ajax call
       dataString = JSON.stringify(dataJSON,null,'\t'); // convert json object to string
-      $('#js-modalBillArticles').html('<h4>Search by bill number</h4><p>API Call: ' + url + '</p>' + '<pre>' + dataString + '</pre>').foundation('open');
+      $('#js-modalBillArticles').append('<h4>Search by bill number</h4><p>API Call: ' + apiUrl + '</p>' + '<pre>' + dataString + '</pre>').foundation('open');
 
 
       query = encodeURIComponent(billDesc);
       url = "https://newsapi.org/v2/everything?q=" + query + "&from=2017-01-01&sortBy=relevancy&sources=" + sources;
 
-      console.log(url);
+      console.log("news api: " + apiUrl);
 
       $.ajax({
+       url: apiUrl,
+       type: "GET",
+       dataType: 'json',
+       headers: {'X-Api-Key': '6ae0570e133347c9af205810da9ef7e1'}
+      })
+      .done(function(dataJSON){ // function call when response is received, dataJSON is response from ajax call
+        dataString = JSON.stringify(dataJSON,null,'\t');
+        $("#js-modalBillArticles").append('<hr><h4>Search by bill desc</h4><p>API Call: ' + apiUrl + '</p>' + '<pre>' + dataString + '</pre>');
+
+      });
+
+    });
+
+
+
+  })
+
+  $('.js-billOverview').on('click', function() {
+
+    var billDesc = $(this).data("bill-desc");
+    var billSlug = $(this).data("bill-slug");
+    var apiUrl = 'https://api.propublica.org/congress/v1/115/bills/' + billSlug + '.json'
+
+    console.log("prorepublica api: " + apiUrl);
+
+    $.ajax({
+     url: apiUrl,
+     type: "GET",
+     dataType: 'json',
+     headers: {'X-API-Key': 'sHCEuVsfOi06N1Ltq7cIYA2D4J80qhMy7cOa1SWt'}
+     //async: false
+    })
+    .done(function(dataJSON){ // function call when response is received, dataJSON is response from ajax call
+
+      var dataString = JSON.stringify(dataJSON,null,'\t'); // convert json object to string
+      $('#js-modalBillOverview').append('<hr><h5>' + billDesc + '</h5><h6>API Call: ' + apiUrl + '</h6>' + '<pre>' + dataString + '</pre>').foundation('open');
+
+    });
+
+      /*      $.ajax({
+      query = encodeURIComponent(billDesc);
+      url = "https://newsapi.org/v2/everything?q=" + query + "&from=2017-01-01&sortBy=relevancy&sources=" + sources;
+
+      console.log(url);
+
        url: url,
        type: "GET",
        dataType: 'json',
@@ -392,13 +305,10 @@
         dataString = JSON.stringify(dataJSON,null,'\t');
         $("#js-modalBillArticles").append('<hr><h4>Search by bill desc</h4><p>API Call: ' + url + '</p>' + '<pre>' + dataString + '</pre>');
 
-      });
-
-    });
-
-
+      });*/
 
   })
+
 }
 </script>
 
