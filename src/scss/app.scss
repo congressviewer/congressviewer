@@ -50,8 +50,8 @@ $sidebar-width:16rem;
 //.medium-cell-block-y{height:auto;} // fix for apparent bug in sass version of foundation css
 
 
-.reveal{padding-top: 1.5rem;}
-.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6, .reveal p, .reveal pre{color:$black;} // modal text color
+.reveal{padding-top: 1.5rem;border-radius:.25rem;}
+.reveal, .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6, .reveal p, .reveal pre{color:$black;} // modal text color
 
 .light-text{color:#9fa2a7;}
 .democrat{color:get-color(democrat)}
@@ -81,7 +81,7 @@ $sidebar-width:16rem;
 
   // Medium and up styles
   @media screen and #{breakpoint(medium)} {
-    position:absolute;
+    position:fixed;
     top:0;
     bottom:0;
     left:0;

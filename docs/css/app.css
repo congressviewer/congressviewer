@@ -614,12 +614,12 @@ img {
 textarea {
   height: auto;
   min-height: 50px;
-  border-radius: 0; }
+  border-radius: 0.25rem; }
 
 select {
   box-sizing: border-box;
   width: 100%;
-  border-radius: 0; }
+  border-radius: 0.25rem; }
 
 .map_canvas img,
 .map_canvas embed,
@@ -633,7 +633,7 @@ button {
   padding: 0;
   appearance: none;
   border: 0;
-  border-radius: 0;
+  border-radius: 0.25rem;
   background: transparent;
   line-height: 1;
   cursor: auto; }
@@ -2273,7 +2273,8 @@ kbd {
   padding: 0.125rem 0.25rem 0;
   background-color: #e6e6e6;
   font-family: Consolas, "Liberation Mono", Courier, monospace;
-  color: #0a0a0a; }
+  color: #0a0a0a;
+  border-radius: 0.25rem; }
 
 .subheader {
   margin-top: 0.2rem;
@@ -2396,7 +2397,7 @@ ul.no-bullet, ol.no-bullet {
   padding: 0.85em 1em;
   -webkit-appearance: none;
   border: 1px solid transparent;
-  border-radius: 0;
+  border-radius: 0.25rem;
   transition: background-color 0.25s ease-out, color 0.25s ease-out;
   font-size: 0.9rem;
   line-height: 1;
@@ -2829,7 +2830,7 @@ a.button:hover, a.button:focus {
 .label {
   display: inline-block;
   padding: 0.33333rem 0.5rem;
-  border-radius: 0;
+  border-radius: 0.25rem;
   font-size: 0.8rem;
   line-height: 1;
   white-space: nowrap;
@@ -2882,7 +2883,7 @@ html.is-reveal-open {
   display: none;
   padding: 1rem;
   border: 1px solid #9fa2a7;
-  border-radius: 0;
+  border-radius: 0.25rem;
   background-color: #fefefe;
   position: relative;
   top: 100px;
@@ -3054,9 +3055,10 @@ html.is-reveal-open {
   clear: both; }
 
 .reveal {
-  padding-top: 1.5rem; }
+  padding-top: 1.5rem;
+  border-radius: .25rem; }
 
-.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6, .reveal p, .reveal pre {
+.reveal, .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6, .reveal p, .reveal pre {
   color: #0a0a0a; }
 
 .light-text {
@@ -3091,7 +3093,7 @@ html.is-reveal-open {
   background-color: #fefefe; }
   @media screen and (min-width: 40em) {
     .cvSidebar {
-      position: absolute;
+      position: fixed;
       top: 0;
       bottom: 0;
       left: 0;

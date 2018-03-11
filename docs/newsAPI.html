@@ -1,0 +1,89 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Congress Viewer</title>
+  <link rel="stylesheet" href="css/app.css">
+  <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.css">-->
+  <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
+
+  <link rel="icon" type="image/png" href="img/favicon.png">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114562198-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-114562198-1');
+  </script>
+
+</head>
+<body>
+
+<div class="cvSidebar">
+  <h1 class="cvSidebar_siteLogo">Congress<br class="hide-for-small-only"> <i class="fas fa-eye"></i>Viewer</h1>
+  <hr class="cvSidebar_divider hide-for-small-only">
+  <ul class="cvSidebar_nav hide-for-small-only">
+    <li><a href="#" class="cvSidebar_navItem"><i class="fas fa-check"></i>Recent Votes</a></li>
+    <li><a href="#" class="cvSidebar_navItem"><i class="far fa-calendar-alt"></i>Upcoming Bills</a></li>
+    <li><a href="#" class="cvSidebar_navItem"><i class="fas fa-user-circle"></i>Representitive Info</a></li>
+  </ul>
+  <hr class="cvSidebar_divider hide-for-small-only">
+  <ul class="cvSidebar_siteLinks hide-for-small-only">
+    <li><a href="#" class="cvSidebar_siteLinksItem">About</a></li>
+    <li><a href="#" class="cvSidebar_siteLinksItem">Contact</a></li>
+  </ul>
+</div>
+<div class="cvContent">
+  <div class="cvMainGrid grid-x grid-padding-x">
+    <div class="cell large-12" id="results">
+
+
+
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/js/foundation.min.js"></script>
+<script>
+  $(document).foundation();
+</script>
+
+<script>
+
+  var sources = "the-new-york-times," +
+                "the-washington-post," +
+                "usa-today," +
+                "nbc-news," +
+                "reuters," +
+                "msnbc," +
+                "independant," +
+                "cnn," +
+                "cbs-news," +
+                "abc-news," +
+                "bbc-news"
+
+  var query = encodeURIComponent('"HR 880" OR "H.R. 880"');
+
+  console.log("sources: " + sources);
+  console.log("query: " + query);
+
+  $.ajax({
+   url: "https://newsapi.org/v2/everything?q=" + query + "&from=2017-01-01&sortBy=relevancy&sources=" + sources,
+   type: "GET",
+   dataType: 'json',
+   headers: {'X-Api-Key': '6ae0570e133347c9af205810da9ef7e1'}
+  })
+  .done(function(dataJSON){ // function call when response is received, dataJSON is response from ajax call
+    dataString = JSON.stringify(dataJSON,null,'\t'); // convert json object to string
+    $("#results").append('<pre>' + dataString + '</pre>'); // print the response to pre tag (maintaining spaces and line breaks)
+  });
+
+</script>
+
+</body>
+</html>
