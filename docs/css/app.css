@@ -2129,7 +2129,7 @@ h6, .h6 {
   font-family: "Merriweather", serif;
   font-style: normal;
   font-weight: 400;
-  color: inherit;
+  color: #fefefe;
   text-rendering: optimizeLegibility; }
   h1 small, .h1 small,
   h2 small, .h2 small,
@@ -2943,6 +2943,68 @@ html.is-reveal-open {
   .reveal.without-overlay {
     position: fixed; }
 
+.tabs {
+  margin: 0;
+  border: 1px solid transparent;
+  background: transparent;
+  list-style-type: none; }
+  .tabs::before, .tabs::after {
+    display: table;
+    content: ' ';
+    flex-basis: 0;
+    order: 1; }
+  .tabs::after {
+    clear: both; }
+
+.tabs.vertical > li {
+  display: block;
+  float: none;
+  width: auto; }
+
+.tabs.simple > li > a {
+  padding: 0; }
+  .tabs.simple > li > a:hover {
+    background: transparent; }
+
+.tabs.primary {
+  background: #04a2b3; }
+  .tabs.primary > li > a {
+    color: #0a0a0a; }
+    .tabs.primary > li > a:hover, .tabs.primary > li > a:focus {
+      background: #04b0c3; }
+
+.tabs-title {
+  float: left; }
+  .tabs-title > a {
+    display: block;
+    padding: 1.25rem 1.5rem;
+    font-size: 0.75rem;
+    line-height: 1;
+    color: #04a2b3; }
+    .tabs-title > a:hover {
+      background: transparent;
+      color: #038b9a; }
+    .tabs-title > a:focus, .tabs-title > a[aria-selected='true'] {
+      background: transparent;
+      color: #04a2b3; }
+
+.tabs-content {
+  border: 1px solid transparent;
+  border-top: 0;
+  background: transparent;
+  color: #fefefe;
+  transition: all 0.5s ease; }
+
+.tabs-content.vertical {
+  border: 1px solid transparent;
+  border-left: 0; }
+
+.tabs-panel {
+  display: none;
+  padding: 1rem; }
+  .tabs-panel.is-active {
+    display: block; }
+
 .hide {
   display: none !important; }
 
@@ -3084,10 +3146,8 @@ html.is-reveal-open {
   background-color: #e66060;
   color: #fefefe; }
 
-.cvMainGrid {
-  padding: 0 1rem; }
-  .cvMainGrid .cell {
-    padding-bottom: 1.5rem; }
+.cvMainGrid .cell {
+  padding-bottom: 1.5rem; }
 
 .cvSidebar {
   background-color: #fefefe; }
@@ -3148,10 +3208,50 @@ html.is-reveal-open {
     .cvSidebar_siteLinksItem:hover, .cvSidebar_siteLinksItem:focus {
       color: #0a0a0a; }
 
+.cvTabs .tabs {
+  border-bottom: .125rem;
+  background-color: #323c48; }
+
+.cvTabs .tabs-title {
+  float: right; }
+
+.cvTabs .tabs-title a {
+  background-color: #2a323c;
+  color: #e6e6e6;
+  font-family: 'Merriweather', serif;
+  font-size: 1rem;
+  border-top-left-radius: 1em 5em;
+  border-top-right-radius: 1em 5em;
+  transition: all 0.2s ease; }
+  @media screen and (min-width: 64em) {
+    .cvTabs .tabs-title a {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      margin-right: 1rem;
+      font-size: 2.5rem;
+      border-top-left-radius: 1em 5em;
+      border-top-right-radius: 1em 5em; } }
+  .cvTabs .tabs-title a:hover {
+    color: #b3b3b3; }
+  .cvTabs .tabs-title a:focus {
+    background-color: #e6e6e6;
+    outline: none; }
+
+.cvTabs .is-active > a {
+  background-color: #fefefe;
+  color: #2a323c; }
+  .cvTabs .is-active > a:hover {
+    background-color: #fefefe;
+    color: #2a323c; }
+
+.cvTabs .tabs-panel {
+  border-top: 0.125rem solid #fefefe;
+  min-height: 95vh; }
+
 @media screen and (min-width: 40em) {
   .cvContent {
     margin-left: 16rem;
-    padding: 1rem 0; } }
+    padding: 0 0 -1rem 0; } }
 
 .cvContent_panel {
   background-color: #323c48;
