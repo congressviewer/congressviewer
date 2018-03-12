@@ -172,19 +172,23 @@ $toptabs-width:4rem;
     box-shadow: inset 1rem 1rem 3rem -1rem lighten($body-background, 55%);
   }
 
-  .tabs-title{float:right;}
+  .tabs-title{
+    float:right;
+  }
   .tabs-title a{
-    background-color:transparent;
+    background-color:lighten($body-background, 55%);
     color:$light-gray;
     font-family:'Merriweather', serif;
-
     font-size:1rem;
     border-top-left-radius:1em 5em;
     border-top-right-radius:1em 5em;
+    background-image:linear-gradient(lighten($body-background, 62%), lighten($body-background, 55%));
+    text-shadow: 1px 1px lighten($body-background, 15%);
 
     @media screen and #{breakpoint(large)} {
       padding-left:2rem;
       padding-right:2rem;
+      padding-bottom:1rem;
       margin-right:1rem;
       font-size:2.5rem;
       border-top-left-radius:1em 5em;
@@ -192,19 +196,18 @@ $toptabs-width:4rem;
     }
 
     transition: all 0.2s ease;
-    background-color:lighten($body-background, 55%);
-    text-shadow: 1px 1px lighten($body-background, 15%);
 
     &:hover{background-color:lighten($body-background, 50%);color:$white;}
     &:focus{outline:none;}
   }
 
   .is-active>a{
+    background-image:none;
     background-color:$body-background;color:$white;
     &:hover{background-color:$body-background;color:$white;}
 
   }
-  .tabs-panel{border-top:.125rem solid $white;min-height:95vh;}
+  .tabs-panel{min-height:95vh;}
 }
 
 .cvContent{

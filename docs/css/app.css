@@ -3217,19 +3217,20 @@ html.is-reveal-open {
   float: right; }
 
 .cvTabs .tabs-title a {
-  background-color: transparent;
+  background-color: #b4becb;
   color: #e6e6e6;
   font-family: 'Merriweather', serif;
   font-size: 1rem;
   border-top-left-radius: 1em 5em;
   border-top-right-radius: 1em 5em;
-  transition: all 0.2s ease;
-  background-color: #b4becb;
-  text-shadow: 1px 1px #4a5869; }
+  background-image: linear-gradient(#c9d0d9, #b4becb);
+  text-shadow: 1px 1px #4a5869;
+  transition: all 0.2s ease; }
   @media screen and (min-width: 64em) {
     .cvTabs .tabs-title a {
       padding-left: 2rem;
       padding-right: 2rem;
+      padding-bottom: 1rem;
       margin-right: 1rem;
       font-size: 2.5rem;
       border-top-left-radius: 1em 5em;
@@ -3241,6 +3242,7 @@ html.is-reveal-open {
     outline: none; }
 
 .cvTabs .is-active > a {
+  background-image: none;
   background-color: #2a323c;
   color: #fefefe; }
   .cvTabs .is-active > a:hover {
@@ -3248,7 +3250,6 @@ html.is-reveal-open {
     color: #fefefe; }
 
 .cvTabs .tabs-panel {
-  border-top: 0.125rem solid #fefefe;
   min-height: 95vh; }
 
 @media screen and (min-width: 40em) {
