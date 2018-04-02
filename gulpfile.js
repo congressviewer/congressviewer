@@ -5,7 +5,7 @@ var concat = require('gulp-concat');
 var autoprefixer = require('gulp-autoprefixer');
 var csso = require('gulp-csso');
 var plumber = require('gulp-plumber');
-//var uglify = require('gulp-uglify');
+var uglify = require('gulp-uglify');
 //var rename = require('gulp-rename');
 //var imagemin = require('gulp-imagemin');
 
@@ -38,21 +38,24 @@ gulp.task('styles', function() {
 
 // Concat main javascript
 gulp.task('scripts', function() {
-  return gulp.src(['./node_modules/foundation-sites/node_modules/jquery/dist/jquery.js',
+  return gulp.src([
+      './node_modules/foundation-sites/node_modules/jquery/dist/jquery.js',
       './node_modules/foundation-sites/node_modules/what-input/what-input.js',
-      //'./node_modules/foundation-sites/dist/foundation.min.js',  // full js
+      './node_modules/foundation-sites/dist/js/foundation.js',  // full js
       //'./node_modules/foundation-sites/dist/plugins/foundation.core.js',
       //'./node_modules/foundation-sites/dist/plugins/foundation.util.mediaQuery.js',
       //'./node_modules/foundation-sites/dist/plugins/foundation.magellan.js',
       //'./node_modules/foundation-sites/dist/plugins/foundation.abide.js',
-      //'./node_modules/pickadate/lib/picker.js',
-      //'./node_modules/pickadate/lib/picker.date.js',
-      //'./src/js/owl.carousel.min.js',
-      './src/js/heroesData.js',
       './src/js/app.js'])
+    .pipe(plumber({
+      handleError: function (err) {
+        console.log(err);
+        this.emit('end');
+      }
+    }))
     .pipe(concat('app.js'))
-    .pipe(uglify())
-    .pipe(gulp.dest('./public/js'));
+    //.pipe(uglify())
+    .pipe(gulp.dest('./docs/js'));
  });
 
  // compress images
