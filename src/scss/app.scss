@@ -59,7 +59,6 @@ $toptabs-width:4rem;
 .passed{color:get-color(success)}
 .failed{color:get-color(alert)}
 
-
 .label.democrat{
   background-color:get-color(democrat);
   color:$white;
@@ -243,48 +242,4 @@ $toptabs-width:4rem;
 
 }
 
-
-.voteResultTable{
-
-  border:none;
-  border-collapse: collapse;
-
-  &_rowLabel{
-    padding:.25rem .5rem .25rem 0;
-    border:none;
-    text-align:right;
-  }
-  &_voteTotal{
-    padding:.375rem .5rem;
-    border:1px solid $dark-gray;
-  }
-  &_voteCount{
-    padding:.375rem;
-    border:1px solid $dark-gray;
-    text-align:center;
-
-    &--percent{
-      padding:.375rem .5rem;
-      font-weight:bold;
-      letter-spacing:1px;
-    }
-    &--graph{
-      text-align:left;
-    }
-  }
-
-  &_lineGraph{
-
-    display:inline-block;
-    float:left;
-    height:1.5rem;
-
-    &--republican{
-      background-color:get-color(republican);
-    }
-    &--democrat{
-      background-color:get-color(democrat);
-      margin-right:.375rem;
-    }
-  }
-}
+@import 'cvVoteTable';

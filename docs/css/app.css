@@ -3267,32 +3267,32 @@ html.is-reveal-open {
 .cvRecentVote_date {
   float: right; }
 
-.voteResultTable {
+.cvVoteTable {
   border: none;
   border-collapse: collapse; }
-  .voteResultTable_rowLabel {
+  .cvVoteTable_rowLabel {
     padding: .25rem .5rem .25rem 0;
     border: none;
     text-align: right; }
-  .voteResultTable_voteTotal {
+  .cvVoteTable_voteTotal {
     padding: .375rem .5rem;
     border: 1px solid #777; }
-  .voteResultTable_voteCount {
+  .cvVoteTable_voteCount {
     padding: .375rem;
     border: 1px solid #777;
     text-align: center; }
-    .voteResultTable_voteCount--percent {
+    .cvVoteTable_voteCount--percent {
       padding: .375rem .5rem;
       font-weight: bold;
       letter-spacing: 1px; }
-    .voteResultTable_voteCount--graph {
+    .cvVoteTable_voteCount--graph {
       text-align: left; }
-  .voteResultTable_lineGraph {
+  .cvVoteTable_lineGraph {
     display: inline-block;
     float: left;
     height: 1.5rem; }
-    .voteResultTable_lineGraph--republican {
+    .cvVoteTable_lineGraph--republican {
       background-color: #e66060; }
-    .voteResultTable_lineGraph--democrat {
+    .cvVoteTable_lineGraph--democrat {
       background-color: #04a2b3;
       margin-right: .375rem; }

@@ -208,36 +208,36 @@ $.ajax({
         '</div> \n' +
         '<div class="cell large-9"> \n' +
 
-          '<table class="voteResultTable"> \n' +
+          '<table class="cvVoteTable"> \n' +
             '<tr> \n' +
-              '<td class="voteResultTable_rowLabel">Yea</td> \n' +
-              '<td class="voteResultTable_voteCount voteResultTable_voteCount--percent">' + percentYes + '%</td> \n' +
-              '<td class="voteResultTable_voteCount voteResultTable_voteCount--"graph>' + totalYes + ' \n' +
-                '<div class="voteResultTable_lineGraph voteResultTable_lineGraph--republican" style="width:' + (republicanYes * .75) + 'px;"></div> \n' +
-                '<div class="voteResultTable_lineGraph voteResultTable_lineGraph--democrat" style="width:' + (democratYes * .75) + 'px;"></div> \n' +
+              '<td class="cvVoteTable_rowLabel">Yea</td> \n' +
+              '<td class="cvVoteTable_voteCount cvVoteTable_voteCount--percent">' + percentYes + '%</td> \n' +
+              '<td class="cvVoteTable_voteCount cvVoteTable_voteCount--"graph>' + totalYes + ' \n' +
+                '<div class="cvVoteTable_lineGraph cvVoteTable_lineGraph--republican" style="width:' + (republicanYes * .75) + 'px;"></div> \n' +
+                '<div class="cvVoteTable_lineGraph cvVoteTable_lineGraph--democrat" style="width:' + (democratYes * .75) + 'px;"></div> \n' +
               '</td> \n' +
-              '<td class="voteResultTable_voteCount"><span class="label republican">' + republicanYes + '</span></td> \n' +
-              '<td class="voteResultTable_voteCount"><span class="label democrat">' + democratYes + '</span></td> \n' +
+              '<td class="cvVoteTable_voteCount"><span class="label republican">' + republicanYes + '</span></td> \n' +
+              '<td class="cvVoteTable_voteCount"><span class="label democrat">' + democratYes + '</span></td> \n' +
             '</tr> \n' +
             '<tr> \n' +
-              '<td class="voteResultTable_rowLabel">Nay</td> \n' +
-              '<td class="voteResultTable_voteCount voteResultTable_voteCount--percent">' + percentNo + '%</td> \n' +
-              '<td class="voteResultTable_voteCount voteResultTable_voteCount--graph">' + totalNo + ' \n' +
-                '<div class="voteResultTable_lineGraph voteResultTable_lineGraph--republican" style="width:' + (republicanNo * .75) + 'px;"></div> \n' +
-                '<div class="voteResultTable_lineGraph voteResultTable_lineGraph--democrat" style="width:' + (democratNo * .75) + 'px;"></div> \n' +
+              '<td class="cvVoteTable_rowLabel">Nay</td> \n' +
+              '<td class="cvVoteTable_voteCount cvVoteTable_voteCount--percent">' + percentNo + '%</td> \n' +
+              '<td class="cvVoteTable_voteCount cvVoteTable_voteCount--graph">' + totalNo + ' \n' +
+                '<div class="cvVoteTable_lineGraph cvVoteTable_lineGraph--republican" style="width:' + (republicanNo * .75) + 'px;"></div> \n' +
+                '<div class="cvVoteTable_lineGraph cvVoteTable_lineGraph--democrat" style="width:' + (democratNo * .75) + 'px;"></div> \n' +
               '</td> \n' +
-              '<td class="voteResultTable_voteCount"><span class="label republican">' + republicanNo + '</span></td> \n' +
-              '<td class="voteResultTable_voteCount"><span class="label democrat">' + democratNo + '</span></td> \n' +
+              '<td class="cvVoteTable_voteCount"><span class="label republican">' + republicanNo + '</span></td> \n' +
+              '<td class="cvVoteTable_voteCount"><span class="label democrat">' + democratNo + '</span></td> \n' +
             '</tr> \n' +
             '<tr> \n' +
-              '<td class="voteResultTable_rowLabel">Not Voting</td> \n' +
-              '<td class="voteResultTable_voteCount voteResultTable_voteCount--percent">' + percentNotVoting + '%</td> \n' +
-              '<td class="voteResultTable_voteCount voteResultTable_voteCount--graph">' + totalNotVoting + ' \n' +
-                '<div class="voteResultTable_lineGraph voteResultTable_lineGraph--republican" style="width:' + (republicanNotVoting * .75) + 'px;"></div> \n' +
-                '<div class="voteResultTable_lineGraph voteResultTable_lineGraph--democrat" style="width:' + (democratNotVoting * .75) + 'px;"></div> \n' +
+              '<td class="cvVoteTable_rowLabel">Not Voting</td> \n' +
+              '<td class="cvVoteTable_voteCount cvVoteTable_voteCount--percent">' + percentNotVoting + '%</td> \n' +
+              '<td class="cvVoteTable_voteCount cvVoteTable_voteCount--graph">' + totalNotVoting + ' \n' +
+                '<div class="cvVoteTable_lineGraph cvVoteTable_lineGraph--republican" style="width:' + (republicanNotVoting * .75) + 'px;"></div> \n' +
+                '<div class="cvVoteTable_lineGraph cvVoteTable_lineGraph--democrat" style="width:' + (democratNotVoting * .75) + 'px;"></div> \n' +
               '</td> \n' +
-              '<td class="voteResultTable_voteCount"><span class="label republican">' + republicanNotVoting + '</span></td> \n' +
-              '<td class="voteResultTable_voteCount"><span class="label democrat">' + democratNotVoting + '</span></td> \n' +
+              '<td class="cvVoteTable_voteCount"><span class="label republican">' + republicanNotVoting + '</span></td> \n' +
+              '<td class="cvVoteTable_voteCount"><span class="label democrat">' + democratNotVoting + '</span></td> \n' +
             '</tr> \n' +
           '</table> \n' +
 
