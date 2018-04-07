@@ -41,14 +41,15 @@
   <div class="cvTabs">
 
     <ul class="tabs" data-tabs id="example-tabs">
-      <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">House</a></li>
-      <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Senate</a></li>
+      <li class="tabs-title"><a data-tabs-target="cvMainPanelHouse" href="#house">House</a></li>
+      <li class="tabs-title is-active"><a data-tabs-target="cvMainPanelSenate" href="#senate" aria-selected="true">Senate</a></li>
     </ul>
     <div class="tabs-content" data-tabs-content="example-tabs">
-      <div class="tabs-panel is-active" id="panel1"><!-- SENATE PANEL -->
+      <div class="tabs-panel is-active" id="cvMainPanelSenate"><!-- SENATE PANEL -->
+
         <h4 class="light-text">senate content</h4>
 
-<!--
+        <!--
         <table class="voteResultTable">
           <tr>
             <td class="voteResultTable_rowLabel">Yea</td>
@@ -84,7 +85,7 @@
 -->
 
       </div>
-      <div class="tabs-panel" id="panel2"> <!-- HOUSE PANEL -->
+      <div class="tabs-panel" id="cvMainPanelHouse"> <!-- HOUSE PANEL -->
 
         <div class="cvMainGrid grid-x grid-padding-x">
           <div class="cell large-8 js-homeRecentVotes">
